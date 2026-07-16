@@ -726,17 +726,6 @@ local function AddDropdown(parent, labelText, options, defaultIndex, callback)
                 optLbl.ZIndex = 203
                 optLbl.Parent = optBtn
 
-                if isSelected then
-                    local indicator = Instance.new("Frame")
-                    indicator.Size = UDim2.new(0, 2, 0.6, 0)
-                    indicator.Position = UDim2.new(0, 2, 0.2, 0)
-                    indicator.BackgroundColor3 = THEME.Scheme
-                    indicator.BorderSizePixel = 0
-                    indicator.ZIndex = 203
-                    indicator.Parent = optBtn
-                    Instance.new("UICorner", indicator).CornerRadius = UDim.new(0, 2)
-                end
-
                 optBtn.MouseEnter:Connect(function()
                     if idx ~= selectedIndex then optBtn.BackgroundColor3 = THEME.FrameBg end
                 end)
