@@ -1172,9 +1172,9 @@ local function resolveIcon(icon)
     if type(icon) == "string" then
         if ICONS[icon] then return ICONS[icon] end
         if icon:match("^rbxassetid") or icon:match("^http") then return icon end
-        return iconId(icon, ICONS.settings)
+        return iconId(icon, ICONS.misc)
     end
-    return ICONS.settings
+    return ICONS.misc
 end
 
 local function makeSection(column, name)
